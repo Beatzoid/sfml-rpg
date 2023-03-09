@@ -1,13 +1,16 @@
 #include "Game.h"
 
-// Static Functions
+/* Static Functions */
 
-// Init Functions
+/* Init Functions */
 
 void Game::initWindow()
 {
-    /* Creates an SFML window using the full desktop width and height as the window size */
-    // TODO: Load the window options from a file (e.x. window.ini)
+    /*
+        Creates an SFML window using the full desktop width and height as the window size
+        and also gives it a simple title
+        TODO: Load the window options from a file (e.x. window.ini)
+    */
     this->window = new sf::RenderWindow(
         sf::VideoMode(
             sf::VideoMode::getDesktopMode().width,
@@ -15,7 +18,8 @@ void Game::initWindow()
         "SFML Application");
 }
 
-// Constructors/Destructors
+/* Constructors/Destructors */
+
 Game::Game()
 {
     this->initWindow();
@@ -23,10 +27,18 @@ Game::Game()
 
 Game::~Game()
 {
+    /* Cleanup */
+
     delete this->window;
 }
 
-// Functions
+/* Functions */
+
+void Game::updateDeltaTime()
+{
+    /* Updates the dt variable with the time it took to update and render the last frame */
+    this->dt = this->dtClock.restart().asSeconds();
+}
 
 void Game::updateSFMLEvents()
 {
@@ -56,6 +68,7 @@ void Game::run()
 {
     while (this->window->isOpen())
     {
+        this->updateDeltaTime();
         this->update();
         this->render();
     }
