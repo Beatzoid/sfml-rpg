@@ -1,4 +1,4 @@
-[![cpp-linter](https://github.com/cpp-linter/cpp-linter-action/actions/workflows/cpp-linter.yml/badge.svg)](https://github.com/cpp-linter/cpp-linter-action/actions/workflows/cpp-linter.yml) [![CodeFactor](https://www.codefactor.io/repository/github/beatzoid/sfml-rpg/badge)](https://www.codefactor.io/repository/github/beatzoid/sfml-rpg)
+[![cpp-linter](https://github.com/beatzoid/sfml-rpg/actions/workflows/cpp-lint.yml/badge.svg)](https://github.com/beatzoid/sfml-rpg/actions/workflows/cpp-lint.yml) [![CodeFactor](https://www.codefactor.io/repository/github/beatzoid/sfml-rpg/badge)](https://www.codefactor.io/repository/github/beatzoid/sfml-rpg)
 
 # SFML RPG
 
