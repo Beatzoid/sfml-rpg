@@ -9,15 +9,33 @@
 void Game::initWindow()
 {
     /*
-        Creates an SFML window using the full desktop width and height as the window size
-        and also gives it a simple title
-        TODO: Load the window options from a file (e.x. window.ini)
+        Creates an SFML window using settings from a window.ini file
     */
-    this->window = new sf::RenderWindow(
-        sf::VideoMode(
-            sf::VideoMode::getDesktopMode().width,
-            sf::VideoMode::getDesktopMode().height),
-        "SFML Application");
+
+    std::ifstream ifs("./window.ini");
+
+    /* Default window settings */
+
+    sf::VideoMode window_bounds(800, 600);
+    std::string title = "None";
+    unsigned framerate_limit = 120;
+    bool vertical_sync_enabled = false;
+
+    // Open the config file and set each line to its specific variable
+    if (ifs.is_open())
+    {
+        std::getline(ifs, title);
+        ifs >> window_bounds.width >> window_bounds.height;
+        ifs >> framerate_limit;
+        ifs >> vertical_sync_enabled;
+    }
+
+    ifs.close();
+
+    // Create the window with the variables above
+    this->window = new sf::RenderWindow(window_bounds, title);
+    this->window->setFramerateLimit(framerate_limit);
+    this->window->setVerticalSyncEnabled(vertical_sync_enabled);
 }
 
 /* Constructors/Destructors */
