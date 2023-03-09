@@ -1,6 +1,7 @@
 #pragma once
 
 // Core
+
 #include <algorithm>
 #include <deque>
 #include <iostream>
