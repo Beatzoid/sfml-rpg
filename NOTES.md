@@ -2,7 +2,16 @@
 
 A collection of stuff I have learned from doing this project.
 
-<br />
+# Table Of Contents
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+-   [Pure Virtual Function](#pure-virtual-function)
+    -   [Syntax](#syntax)
+    -   [Example](#example)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # Pure Virtual Function
 
