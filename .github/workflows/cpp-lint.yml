@@ -21,6 +21,7 @@ jobs:
                   version: "15"
                   ignore: "bin | .github | .vscode"
                   thread-comments: true
+                  files-changed-only: false
 
             - name: Fail fast?!
               if: steps.linter.outputs.checks-failed > 0
