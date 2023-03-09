@@ -1,7 +1,5 @@
 #pragma once
 
-#include "State.h"
-
 class Game
 {
 private:
