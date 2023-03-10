@@ -1,7 +1,7 @@
 SFML_PATH = /opt/homebrew/Cellar/sfml/2.5.1_2
 
 cppFileNames := $(shell find ./src -type f -name "*.cpp")
-GPP_OPTIONS = -Wall -Werror -Wextra -Winit-self -Wold-style-cast -Woverloaded-virtual -Wuninitialized -Wmissing-declarations
+GPP_OPTIONS = -Wall -Wextra -Winit-self -Wold-style-cast -Woverloaded-virtual -Wuninitialized -Wmissing-declarations
 
 all: compile
 

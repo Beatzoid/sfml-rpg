@@ -1,5 +1,3 @@
-#include "../utils/incl.h"
-
 #include "Game.h"
 
 /* Static Functions */
@@ -12,6 +10,11 @@ void Game::initWindow()
         Creates an SFML window using settings from a window.ini file
     */
 
+    /*
+        This path is relative to the file inside the bin folder
+        If you use a different path (e.x. ./config/window.ini)
+        then put it here instead
+    */
     std::ifstream ifs("./window.ini");
 
     /* Default window settings */
@@ -38,11 +41,17 @@ void Game::initWindow()
     this->window->setVerticalSyncEnabled(vertical_sync_enabled);
 }
 
+void Game::initStates()
+{
+    this->states.push(new GameState(this->window));
+}
+
 /* Constructors/Destructors */
 
 Game::Game()
 {
     this->initWindow();
+    this->initStates();
 }
 
 Game::~Game()
@@ -50,6 +59,12 @@ Game::~Game()
     /* Cleanup */
 
     delete this->window;
+
+    while (!this->states.empty())
+    {
+        delete this->states.top();
+        this->states.pop();
+    }
 }
 
 /* Functions */
@@ -73,6 +88,10 @@ void Game::updateSFMLEvents()
 void Game::update()
 {
     this->updateSFMLEvents();
+
+    // Update top (first) state item
+    if (!this->states.empty())
+        this->states.top()->update(this->dt);
 }
 
 void Game::render()
@@ -80,6 +99,10 @@ void Game::render()
     this->window->clear();
 
     // Put anything you want to render here (between the clear and display lines)
+
+    // Render top (first) state item
+    if (!this->states.empty())
+        this->states.top()->render(this->window);
 
     this->window->display();
 }

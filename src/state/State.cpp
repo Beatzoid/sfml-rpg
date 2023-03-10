@@ -1,9 +1,10 @@
-#include "../utils/incl.h"
+
 
 #include "State.h"
 
-State::State()
+State::State(sf::RenderWindow *window)
 {
+    this->window = window;
 }
 
 State::~State()
