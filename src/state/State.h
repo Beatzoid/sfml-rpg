@@ -26,7 +26,9 @@ public:
         For more info, see the NOTES.md file in the root of the repo
     */
 
-    // Used to cleanup the state before changing to a new one
+    /**
+     * @brief Used to cleanup and end the current state
+     */
     virtual void endState() = 0;
 
     /**
@@ -35,6 +37,7 @@ public:
      * @param dt The delta time, which is the time it took the last frame to render
      */
     virtual void update(const float &dt) = 0;
+
     /**
      * @brief Render the state
      *

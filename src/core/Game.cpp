@@ -62,7 +62,9 @@ Game::~Game()
 
     while (!this->states.empty())
     {
+        // Deletes the data in the pointer
         delete this->states.top();
+        // Deletes the actual pointer
         this->states.pop();
     }
 }
@@ -71,7 +73,7 @@ Game::~Game()
 
 void Game::updateDeltaTime()
 {
-    /* Updates the dt variable with the time it took to update and render the last frame */
+    // Updates the dt variable with the time it took to update and render the last frame
     this->dt = this->dtClock.restart().asSeconds();
 }
 

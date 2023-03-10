@@ -19,7 +19,9 @@ public:
 
     /* Functions */
 
-    // End and cleanup the state
+    /**
+     * @brief End and cleanup the state
+     */
     void endState();
 
     /**
@@ -30,7 +32,7 @@ public:
     void update(const float &dt);
 
     /**
-     * @brief Render the GameStrate
+     * @brief Render the GameState
      *
      * @param target The target to render to, if null then it renders to the default target
      */
