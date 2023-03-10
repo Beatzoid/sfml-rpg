@@ -4,7 +4,9 @@
 
 An RPG made using SFML
 
-# Usage (Only works on MacOS currently)
+# Usage
+
+Note: This only works on MacOS at the moment
 
 1. Clone/download repo
 2. Open in VSCode
