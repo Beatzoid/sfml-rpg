@@ -46,12 +46,14 @@ And this is what an inheriting class's header and cpp files would look like:
 ```cpp
 // "dog.h"
 
-class Dog: public Animal {
-    public:
-        Dog();
+class Dog
+    : public Animal()
+{
+public:
+    Dog();
 
-        void makeNoise();
-}
+    void makeNoise();
+};
 ```
 
 ```cpp
