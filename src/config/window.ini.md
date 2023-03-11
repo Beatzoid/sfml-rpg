@@ -1,6 +1,6 @@
 # Window.ini
 
-I'm too lazy to figure out how to make the parser support comments, so here's what each line means
+Here's what each line means in the `window.ini` file
 
 1. First line is the title of the window
 2. Second line is the width and height, expressed as `width height`

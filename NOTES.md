@@ -1,17 +1,8 @@
 # Notes
 
-A collection of stuff I have learned from doing this project.
+A collection of information I have learned from doing this project.
 
-# Table Of Contents
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
--   [Pure Virtual Function](#pure-virtual-function)
-    -   [Syntax](#syntax)
-    -   [Example](#example)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+[TOC]
 
 # Pure Virtual Function
 
@@ -79,4 +70,4 @@ Dog::makeNoise()
 }
 ```
 
-For a code example in this project, see `State.h`'s update and render functions, and the classes that inherit from `State`
+For a code example in this project, see `State.h`'s update and render functions, and the classes that inherit from `State` (e.x. `GameState`)

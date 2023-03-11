@@ -1,7 +1,7 @@
 #pragma once
 
-/**
- * @brief This file is the central includes header. All other files include from this
+/*
+ * This file is the central includes header. All other files include from this
  * instead of copying the includes from it. It makes it a lot easier to manage the includes
  * and makes the code look a lot cleaner
  */

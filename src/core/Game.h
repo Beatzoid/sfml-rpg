@@ -3,6 +3,10 @@
 #include "../utils/incl.h"
 #include "../state/states/GameState.h"
 
+/**
+ * @brief The Game class manages all the core logic for the game
+ *
+ */
 class Game
 {
 private:
@@ -48,10 +52,6 @@ private:
 public:
     /* Constructors/Destructors */
 
-    /**
-     * @brief The Game class manages all the core logic for the game
-     *
-     */
     Game();
     virtual ~Game();
 
@@ -71,7 +71,7 @@ public:
     void update();
     /**
      * @brief Render all objects for the game
-     * 
+     *
      */
     void render();
     /**

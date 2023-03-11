@@ -1,5 +1,5 @@
 {
-    "cSpell.words": ["cout", "doctoc", "SFML"],
+    "cSpell.words": ["cout", "doctoc", "Doxygen", "SFML"],
     "files.associations": {
         "*.css": "css",
         "__availability": "cpp",
